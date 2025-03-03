@@ -110,7 +110,7 @@ source_data = "TTS/tags_replaced.csv"
 # create a csv loader chain
 # df = pd.read_csv(source_data, index_col=0, header=0, sep=",")
 meta_data_extract_chain = create_csv_agent(
-    ChatOpenAI(model="gpt-4-turbo", temperature=0),
+    chat = ChatOpenAI(model="gpt-4-turbo", temperature=0, openai_api_key="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"),
     source_data,
     verbose=True,
     agent_type="openai-tools",
